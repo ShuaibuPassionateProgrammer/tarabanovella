@@ -15,8 +15,15 @@
     </header>
 
     <div class="container">
-        <?php require("includes/dbconf.php"); ?>
-        
+        <?php 
+        require("includes/dbconf.php");
+
+        try {
+            
+        }
+        catch (e) {}
+        ?>
+
     </div>
 
 <?php require("includes/footer.php"); ?>
