@@ -45,4 +45,10 @@
 
     </div>
 
+    <div class="container">
+        <div class="row justify-content-center">
+            <a href="post.php" class="btn btn-outline-primary">More Journals</a>
+        </div>
+    </div>
+
 <?php require("includes/footer.php"); ?>
