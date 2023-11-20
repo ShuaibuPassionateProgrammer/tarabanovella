@@ -21,6 +21,7 @@
         try {
             $stmt = $dbcon->prepare("SELECT * FROM tbl_journals ORDER BY publication_date DESC LIMIT 5");
             $stmt->execute();
+            $journalEntries = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         catch (e) {}
         ?>
