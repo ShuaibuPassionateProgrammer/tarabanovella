@@ -14,6 +14,9 @@
         </div>
     </header>
 
-    <div class="container"></div>
+    <div class="container">
+        <?php require("includes/dbconf.php"); ?>
+        
+    </div>
 
 <?php require("includes/footer.php"); ?>
