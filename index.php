@@ -22,8 +22,25 @@
             $stmt = $dbcon->prepare("SELECT * FROM tbl_journals ORDER BY publication_date DESC LIMIT 5");
             $stmt->execute();
             $journalEntries = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            if (empty($journalEntries)) {
+                echo '<p>No journals available.</p>';
+            } else {
+                foreach ($journalEntries as $entry) {
+                    echo '<div class="card journal-card">';
+                    echo '<div class="card-body">';
+                    echo '<h2 class="card-title journal-title">' . $entry['title'] . '</h2>';
+                    echo '<p class="card-text journal-excerpt">' . $entry['description'] . '</p>';
+                    echo '<p class="card-text journal-date">' . date('F j, Y', strtotime($entry['publication_date'])) . '</p>';
+                    echo '<a href="uploads/' . $entry['file_path'] . '" class="card-link journal-readmore" target="_blank">Read More</a>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            }
         }
-        catch (e) {}
+        catch (PDOException $e) {
+            echo "Error: ".$e->getMessage();
+        }
         ?>
 
     </div>
