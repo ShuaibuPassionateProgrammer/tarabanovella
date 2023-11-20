@@ -11,9 +11,16 @@
             <div class="col-md-8 shadow p-3">
                 <h1>404 Not Found</h1>
                 <p>The page you are looking for might be in another journal.</p>
-                <a href="/tsunovella">Back to homepage</a>
+                <a href="/tarabanovella">Back to homepage</a>
             </div>
         </div>
     </div>
+
+    <script>
+        // Redirect to the homepage after 9 seconds
+        setTimeout(() => {
+            window.location.href="/tarabanovella";
+        }, 9000);
+    </script>
 </body>
 </html>
