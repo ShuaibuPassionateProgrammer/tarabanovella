@@ -20,7 +20,7 @@
 
         try {
             $stmt = $dbcon->prepare("SELECT * FROM tbl_journals ORDER BY publication_date DESC LIMIT 5");
-            
+            $stmt->execute();
         }
         catch (e) {}
         ?>
