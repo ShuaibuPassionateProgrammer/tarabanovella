@@ -28,6 +28,9 @@ if(isset($_GET['id'])) {
     catch (PDOException $e) {
         echo "Error: ".$e->getMessage();
     }
+
+    header("location: journal_list.php");
+    exit();
 }
 else {
     header("location: journal_list.php");
