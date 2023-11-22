@@ -47,6 +47,7 @@
                     </form>
 
                     <?php if(isset($searchResults) && !empty($searchResults)) : ?>
+                        <h3 class="mt-4">Search Results</h3>
                     <?php endif; ?>
                 </div>
             </div>
