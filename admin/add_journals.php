@@ -44,3 +44,21 @@
 </div>
 
 <?php require('includes/footer.php'); ?>
+<script>
+    function previewFile() {
+        var preview = document.getElementById('preview');
+        var fileInput = document.querySelector('input[type=file]');
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.innerHTML = '<embed src="' + reader.result + '" width="100%" height="600px" />';
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.innerHTML = '';
+        }
+    }
+</script>
