@@ -1,4 +1,6 @@
 <?php
+// search_journals.php
+
 require('a_auth.php');
 require('includes/header.php');
 require('includes/sidebar.php');
@@ -6,6 +8,7 @@ require('includes/topbar.php');
 
 require('includes/dbconf.php');
 
+// Check if the search form is submitted
 if (isset($_POST['search'])) {
     $searchTerm = $_POST['searchTerm'];
 
@@ -67,4 +70,5 @@ if (isset($_POST['search'])) {
         <p>No matching journals found.</p>
     <?php endif; ?>
 </div>
+
 <?php require('includes/footer.php'); ?>
