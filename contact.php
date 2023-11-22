@@ -17,6 +17,14 @@ if(isset($_POST['sendMessageButton'])) {
         $stmt->bindParam(":phone", $phone);
         $stmt->bindParam(":message", $message);
         $stmt->execute();
+
+        if($stmt->rowCount() > 0) {
+            echo "<script>alert('Message sent successfully.')</script>";
+            // Redirect to a success page if needed
+        }
+        else {
+            echo "<script>alert('Error: Message not sent. Please try again.')</script>";
+        }
     }
     catch (PDOException $e) {
         echo "Error: ".$e->getMessage();
