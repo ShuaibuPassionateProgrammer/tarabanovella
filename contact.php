@@ -1,5 +1,9 @@
-<?php require('includes/header.php'); ?>
-<?php require('includes/nav.php'); ?>
+<?php require("includes/header.php"); ?>
+<?php require("includes/nav.php"); ?>
+
+<?php
+require("includes/dbconf.php");
+?>
 
 <header class="masthead" style="background-image: url('assets/img/contact-bg.jpg');">
     <div class="overlay"></div>
