@@ -19,6 +19,10 @@
             <div class="row">
                 <?php
                 require("includes/dbconf.php");
+
+                if(isset($_POST['search'])) {
+                    //
+                }
                 ?>
 
                 <div class="container m-4 p-4 pr-5" style="background-color: #fff;">
