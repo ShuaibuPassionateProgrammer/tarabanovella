@@ -3,6 +3,10 @@
 
 <?php
 require("includes/dbconf.php");
+
+if(isset($_POST['sendMessageButton'])) {
+    
+}
 ?>
 
 <header class="masthead" style="background-image: url('assets/img/contact-bg.jpg');">
