@@ -4,7 +4,9 @@ session_start();
 if(isset($_GET['id'])) {
     require("includes/dbconf.php");
 
-    try {}
+    try {
+        $journalId = $_GET['id'];
+    }
     catch (PDOException $e) {
         echo "Error: ".$e->getMessage();
     }
