@@ -3,6 +3,25 @@
 <?php require('includes/sidebar.php'); ?>
 <?php require('includes/topbar.php'); ?>
 
+<?php
+if(isset($_SESSION['journal_status']))
+{
+    ?>
+    <div class="container m-4 p-4 pr-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="close">&times;</button>
+                    <strong><?= $_SESSION['journal_status']; ?></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+    unset($_SESSION['journal_status']);
+}
+?>
+
 <div class="container m-4 p-4 pr-5" style="background-color: #fff;">
     <h2 class="mb-4">Upload Journal</h2>
 
