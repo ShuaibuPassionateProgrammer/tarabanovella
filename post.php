@@ -17,6 +17,10 @@
     <article>
         <div class="container">
             <div class="row">
+                <?php
+                require("includes/dbconf.php");
+                ?>
+
                 <div class="container m-4 p-4 pr-5" style="background-color: #fff;">
                     <h2 class="mb-4">Search Journals</h2>
 
