@@ -35,6 +35,39 @@ if(isset($_SESSION['admin_login']) !== false)
 </head>
 <body>
     
+    <div class="container login-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center">ADMIN LOGIN</h3>
+                        <p class="text-center mb-4 lead">TSU Novella </p>
+                        <?php if(isset($_SESSION['admin_login_status'])): ?>
+                            <div class="m-2">
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong><?= $_SESSION['admin_login_status']; ?></strong>
+                                    <?php unset($_SESSION['admin_login_status']); ?>
+                                </div>
+                            </div>
+                        <?php endif ?>
+                        <form action="process.php" method="post">
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input type="text" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" name="adlogin">Login</button>
+                        </form>
+                        <div><br><a href="/tsunovella">Back to Homepage</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
