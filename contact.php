@@ -10,6 +10,12 @@ if(isset($_POST['sendMessageButton'])) {
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $message = $_POST['message'];
+
+        $stmt = $dbcon->prepare("INSERT INTO tbl_contact_messages(name, email, phone, message) VALUES (:name, :email, :phone, :message)");
+        $stmt->bindParam(":name", $name);
+        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":phone", $phone);
+        $stmt->bindParam(":message", $message);
     }
     catch (PDOException $e) {
         echo "Error: ".$e->getMessage();
