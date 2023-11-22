@@ -48,6 +48,32 @@
 
                     <?php if(isset($searchResults) && !empty($searchResults)) : ?>
                         <h3 class="mt-4">Search Results</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Description</th>
+                                    <th>Publication</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($searchResults as $result): ?>
+                                    <tr>
+                                        <td><?php echo $result['title']; ?></td>
+                                        <td><?php echo $result['author']; ?></td>
+                                        <td><?php echo $result['description']; ?></td>
+                                        <td><?php echo $result['publication_date']; ?></td>
+                                        <td>
+                                            <a href="uploads/<?php echo $result['file_path']; ?>" target="_blank">Download</a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    <?php elseif(isset($searchResults) && empty($searchResults)) : ?>
+                        <p>No matching journals found.</p>
                     <?php endif; ?>
                 </div>
             </div>
