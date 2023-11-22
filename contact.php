@@ -16,6 +16,7 @@ if(isset($_POST['sendMessageButton'])) {
         $stmt->bindParam(":email", $email);
         $stmt->bindParam(":phone", $phone);
         $stmt->bindParam(":message", $message);
+        $stmt->execute();
     }
     catch (PDOException $e) {
         echo "Error: ".$e->getMessage();
