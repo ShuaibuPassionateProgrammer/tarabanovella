@@ -16,7 +16,9 @@
 
     <article>
         <div class="container">
-            <div class="row"></div>
+            <div class="row">
+                <div class="container m-4 p-4 pr-5" style="background-color: #fff;"></div>
+            </div>
         </div>
     </article>
 
