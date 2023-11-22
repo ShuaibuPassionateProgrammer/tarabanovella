@@ -67,3 +67,4 @@ if (isset($_POST['search'])) {
         <p>No matching journals found.</p>
     <?php endif; ?>
 </div>
+<?php require('includes/footer.php'); ?>
