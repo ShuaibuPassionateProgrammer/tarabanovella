@@ -22,6 +22,11 @@
 
                 if(isset($_POST['search'])) {
                     $searchTerm = $_POST['searchTerm'];
+
+                    try {}
+                    catch (PDOException $e) {
+                        echo "Error: ". $e->getMessage();
+                    }
                 }
                 ?>
 
