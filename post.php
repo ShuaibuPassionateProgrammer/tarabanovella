@@ -14,4 +14,6 @@
         </div>
     </header>
 
+    <article></article>
+
 <?php require('includes/footer.php'); ?>
