@@ -45,6 +45,9 @@
                         </div>
                         <button type="submit" class="btn btn-primary" name="search">Search</button>
                     </form>
+
+                    <?php if(isset($searchResults) && !empty($searchResults)) : ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
