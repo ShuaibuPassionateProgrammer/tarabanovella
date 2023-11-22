@@ -17,7 +17,9 @@
     <article>
         <div class="container">
             <div class="row">
-                <div class="container m-4 p-4 pr-5" style="background-color: #fff;"></div>
+                <div class="container m-4 p-4 pr-5" style="background-color: #fff;">
+                    <h2 class="mb-4">Search Journals</h2>
+                </div>
             </div>
         </div>
     </article>
