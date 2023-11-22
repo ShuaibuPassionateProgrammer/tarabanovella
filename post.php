@@ -21,7 +21,7 @@
                 require("includes/dbconf.php");
 
                 if(isset($_POST['search'])) {
-                    //
+                    $searchTerm = $_POST['searchTerm'];
                 }
                 ?>
 
