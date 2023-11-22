@@ -19,6 +19,14 @@
             <div class="row">
                 <div class="container m-4 p-4 pr-5" style="background-color: #fff;">
                     <h2 class="mb-4">Search Journals</h2>
+
+                    <form action="post.php" method="post">
+                        <div class="form-group">
+                            <label for="searchTerm">Search by Title or Author:</label>
+                            <input type="text" class="form-control form-control-lg" name="searchTerm" placeholder="Enter journal title or author" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="search">Search</button>
+                    </form>
                 </div>
             </div>
         </div>
