@@ -23,7 +23,12 @@
                 if(isset($_POST['search'])) {
                     $searchTerm = $_POST['searchTerm'];
 
-                    try {}
+                    try {
+                        $stmt = $dbcon->prepare("SELECT * tbl_journals WHERE title LIKE :searchTerm OR author LIKE :searchTerm ORDER BY publication_date DESC");
+                        $stmt->bindValue(":searchTerm", "%" . $searchTerm . "%", PDO::PARAM_STR);
+                        $stmt->execute();
+                        $searchResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    }
                     catch (PDOException $e) {
                         echo "Error: ". $e->getMessage();
                     }
