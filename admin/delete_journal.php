@@ -11,6 +11,19 @@ if(isset($_GET['id'])) {
         $stmt->bindParam(":id", $journalId);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($result) {
+            $deleteStmt = $dbcon->prepare("DELETE FROM tbl_journals WHERE id = :id");
+            $deleteStmt->bindParam(':id', $journalId);
+            $deleteStmt->execute();
+
+            // Delete the file from the uploads folder
+            unlink($result['file_path']);
+
+            $_SESSION['del_journal_status'] = "Journal deleted successfully!";
+        } else {
+            $_SESSION['del_journal_status'] = "Error: Journal not found.";
+        }
     }
     catch (PDOException $e) {
         echo "Error: ".$e->getMessage();
