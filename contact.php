@@ -5,7 +5,10 @@
 require("includes/dbconf.php");
 
 if(isset($_POST['sendMessageButton'])) {
-    
+    try {}
+    catch (PDOException $e) {
+        echo "Error: ".$e->getMessage();
+    }
 }
 ?>
 
