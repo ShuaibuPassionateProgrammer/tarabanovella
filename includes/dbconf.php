@@ -2,7 +2,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'tsu_novella');
+define('DB_NAME', 'taraba_novella');
 
 try
 {
