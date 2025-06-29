@@ -2,6 +2,7 @@
 session_start();
 include('includes/dbconf.php');
 
+// Logics to handle admin login
 if(isset($_POST['adlogin']))
 {
     $email = $_POST['email'];
