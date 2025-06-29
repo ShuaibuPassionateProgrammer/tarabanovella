@@ -28,6 +28,7 @@ if(isset($_POST['adlogin']))
     }
 }
 
+// Logics to upload a journals
 if (isset($_POST['upload_journals'])) {
     try {
         $title = $_POST['title'];
