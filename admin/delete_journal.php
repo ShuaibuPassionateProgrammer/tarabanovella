@@ -6,8 +6,7 @@ if(isset($_GET['id'])) {
 
     try {
         $journalId = $_GET['id'];
-
-        // Fetch the file path before deleting the record
+        
         $stmt = $dbcon->prepare("SELECT file_path FROM tbl_journals WHERE id = :id");
         $stmt->bindParam(':id', $journalId);
         $stmt->execute();
