@@ -17,7 +17,6 @@ if(isset($_GET['id'])) {
             $deleteStmt->bindParam(':id', $journalId);
             $deleteStmt->execute();
 
-            // Delete the file from the uploads folder
             unlink($result['file_path']);
 
             $_SESSION['del_journal_status'] = "Journal deleted successfully!";
